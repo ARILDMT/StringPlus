@@ -98,7 +98,104 @@ Unit tests compare implementation results against the standard library to ensure
 - **Testing and quality assurance**: Comprehensive unit testing with high code coverage
 - **Software engineering practices**: Clean code, modular design, documentation
 
+## Usage Example
+
+```c
+#include "string_plus.h"
+
+int main() {
+    // Using standard string functions with plus_ prefix
+    char str[100] = "Hello, ";
+    plus_strncat(str, "World!", 10);
+    printf("Length: %zu\n", plus_strlen(str));
+
+    // Using sprintf implementation
+    char buffer[100];
+    plus_sprintf(buffer, "Number: %d, Float: %.2f", 42, 3.14);
+
+    // Using sscanf implementation
+    int num;
+    float flt;
+    plus_sscanf("42 3.14", "%d %f", &num, &flt);
+
+    // Using utility functions
+    char *upper = plus_to_upper("hello");
+    char *trimmed = plus_trim("  spaces  ", " ");
+
+    free(upper);
+    free(trimmed);
+
+    return 0;
+}
+```
+
+## API Reference
+
+All functions use the `plus_` prefix to avoid naming conflicts with standard library functions.
+
+### String Functions
+- `plus_size_t plus_strlen(const char *str)` - Calculate string length
+- `char *plus_strchr(const char *str, int c)` - Find first occurrence of character
+- `char *plus_strstr(const char *haystack, const char *needle)` - Find substring
+- `char *plus_strncpy(char *dest, const char *src, plus_size_t n)` - Copy string
+- And many more...
+
+### Memory Functions
+- `void *plus_memchr(const void *str, int c, plus_size_t n)` - Find byte in memory
+- `int plus_memcmp(const void *str1, const void *str2, plus_size_t n)` - Compare memory blocks
+- `void *plus_memcpy(void *dest, const void *src, plus_size_t n)` - Copy memory
+- `void *plus_memset(void *str, int c, plus_size_t n)` - Fill memory with byte
+
+### Formatted I/O
+- `int plus_sprintf(char *str, const char *format, ...)` - Format string output
+- `int plus_sscanf(const char *str, const char *format, ...)` - Parse formatted input
+
+### Utility Functions
+- `void *plus_to_upper(const char *str)` - Convert to uppercase (allocates new string)
+- `void *plus_to_lower(const char *str)` - Convert to lowercase (allocates new string)
+- `void *plus_insert(const char *src, const char *str, plus_size_t start_index)` - Insert substring
+- `void *plus_trim(const char *src, const char *trim_chars)` - Trim characters
+
+## Testing
+
+The project includes comprehensive unit tests covering:
+- Boundary conditions and edge cases
+- Comparison with standard library behavior
+- Memory safety and error handling
+- Format string parsing accuracy
+- Cross-platform compatibility
+
+Run tests with:
+```bash
+cd src
+make test
+```
+
+Generate coverage report:
+```bash
+cd src
+make gcov_report
+```
+
+## Contributing
+
+This is a personal portfolio project demonstrating C programming skills. However, if you find bugs or have suggestions, feel free to open an issue.
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
+## Author
+
+**Arsi Richter**
+
+This project showcases advanced C programming capabilities including:
+- Implementation of complex standard library functions from scratch
+- Advanced format string parsing and number conversion algorithms
+- Memory-safe string manipulation
+- Cross-platform C development
+- Test-driven development practices
+
+---
+
+*This project was developed as a comprehensive demonstration of C programming proficiency and software engineering best practices.*

@@ -1,0 +1,40 @@
+# Object files
+*.o
+*.a
+*.so
+*.dylib
+
+# Test executables
+test_string_plus
+test_string_plus_gcov
+
+# Coverage files
+*.gcno
+*.gcda
+*.gcov
+*.info
+report/
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Compiled output
+*.out
+a.out
+
+# Dependency files
+*.d
+
+# Log files
+*.log

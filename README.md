@@ -236,18 +236,3 @@ This is a personal portfolio project demonstrating C programming skills. However
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
-
-## Author
-
-**Arsi Richter**
-
-This project showcases advanced C programming capabilities including:
-- Implementation of complex standard library functions from scratch
-- Advanced format string parsing and number conversion algorithms
-- Memory-safe string manipulation
-- Cross-platform C development
-- Test-driven development practices
-
----
-
-*This project was developed as a comprehensive demonstration of C programming proficiency and software engineering best practices.*

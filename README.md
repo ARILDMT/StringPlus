@@ -63,16 +63,68 @@ make clean
 
 ```
 StringPlus/
-├── src/
-│   ├── string_plus.h      # Main header file
-│   ├── plus_sprintf.h     # sprintf implementation header
-│   ├── plus_sprintf.c     # sprintf implementation
-│   ├── plus_sscanf.c      # sscanf implementation
-│   ├── plus_*.c           # Individual function implementations
-│   ├── test_string_plus.c # Unit tests
-│   └── utils.c            # Utility functions
+├── .gitignore
 ├── LICENSE
-└── README.md
+├── README.md
+└── src/
+    ├── Makefile
+    ├── string_plus.h               # Main header file
+    ├── plus_sprintf.h              # sprintf header
+    │
+    ├── plus_memchr.c               # Memory functions
+    ├── plus_memcmp.c
+    ├── plus_memcpy.c
+    ├── plus_memset.c
+    │
+    ├── plus_strlen.c               # String functions
+    ├── plus_strchr.c
+    ├── plus_strrchr.c
+    ├── plus_strcmp.c
+    ├── plus_strncmp.c
+    ├── plus_strcpy.c
+    ├── plus_strncpy.c
+    ├── plus_strcat.c
+    ├── plus_strncat.c
+    ├── plus_strcspn.c
+    ├── plus_strspn.c
+    ├── plus_strpbrk.c
+    ├── plus_strstr.c
+    ├── plus_strtok.c
+    ├── plus_strerror.c
+    │
+    ├── plus_sprintf.c              # Formatted output
+    ├── plus_sscanf.c               # Formatted input
+    │
+    ├── plus_to_upper.c             # Utility functions
+    ├── plus_to_lower.c
+    ├── plus_insert.c
+    ├── plus_trim.c
+    │
+    ├── plus_assign_char_value.c    # sscanf helpers
+    ├── plus_assign_float_value.c
+    ├── plus_assign_integer_value.c
+    ├── plus_assign_pointer_value.c
+    ├── plus_assign_string_value.c
+    ├── plus_char_to_digit.c
+    ├── plus_handle_literal_match.c
+    ├── plus_parse_exponent.c
+    ├── plus_parse_float.c
+    ├── plus_parse_format_spec.c
+    ├── plus_parse_fraction_part.c
+    ├── plus_parse_integer.c
+    ├── plus_parse_integer_part.c
+    ├── plus_parse_sign.c
+    ├── plus_process_percent.c
+    ├── plus_process_specifier.c
+    ├── plus_scan_char.c
+    ├── plus_scan_float.c
+    ├── plus_scan_integer.c
+    ├── plus_scan_pointer.c
+    ├── plus_scan_string.c
+    ├── plus_skip_whitespace.c
+    │
+    ├── test_string_plus.c          # Unit tests
+    └── utils.c                     # Utility functions
 ```
 
 ## Implementation Highlights
